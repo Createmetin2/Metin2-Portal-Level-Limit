@@ -6,6 +6,12 @@
 void CHARACTER_MANAGER::InitPortalLevelLimit(const char* FileName)
 {
 	std::ifstream file(FileName);
+	if (file.is_open() == false)
+	{
+		sys_err("Cannot open %s file.", FileName);
+		return;
+	}
+
 	std::string   line;
 
 	while (std::getline(file, line))
