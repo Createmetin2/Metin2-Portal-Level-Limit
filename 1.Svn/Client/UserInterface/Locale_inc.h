@@ -1,0 +1,1 @@
+#define __BL_PORTAL_UPDATE__
