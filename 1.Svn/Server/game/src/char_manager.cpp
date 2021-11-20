@@ -29,6 +29,8 @@ void CHARACTER_MANAGER::InitPortalLevelLimit(const char* FileName)
 		linestream >> iMinLevel >> iMaxLevel;
 		AddPortalLevelLimit(std::stoul(dwRaceNum), iMinLevel, iMaxLevel);
 	}
+	
+	file.close();
 }
 
 void CHARACTER_MANAGER::AddPortalLevelLimit(DWORD dwRace, int iMinLevel, int iMaxLevel)
